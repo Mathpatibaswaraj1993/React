@@ -1,5 +1,8 @@
 import First from "./components/First"
 import ArrayRendering from "./components/ArrayRendering"
+import MapFilterExample from "./components/MapFilterExample"
+
+
 export default function App() {
   let a = 34
   let b = 32
@@ -10,6 +13,8 @@ export default function App() {
       <First></First>
       <hr />
       <ArrayRendering></ArrayRendering>
+      <hr />
+      <MapFilterExample></MapFilterExample>
 
       {/* // <hr />
        <div style={{ 'textAlign': 'center' }}>
