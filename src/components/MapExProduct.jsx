@@ -17,7 +17,7 @@ function MapExProduct() {
     ]
 
     return (
-        <div className='text-center text-primary'>MapExample
+        <div className='text-center text-primary'>MapExProduct
             <h2 style={{ backgroundColor: 'green' }} className='text-danger'>Show Product Info using Map</h2>
             <table style={{ backgroundColor: 'pink' }} class="table table-striped w-50 p-4 m-auto  table-hover rounded border overflow-hidden shadow p-3 mb-5  rounded">
                 <thead class="thead-dark">

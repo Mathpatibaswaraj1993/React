@@ -3,21 +3,66 @@ import ArrayRendering from "./components/ArrayRendering"
 import MapFilterExample from "./components/MapFilterExample"
 import MapExample from "./components/MapExample"
 import MapExProduct from "./components/MapExProduct"
+import PropsDemo from "./components/PropsDemo"
+import Square from "./components/Square"
+import Addition from "./components/Addition"
+import Factorial from "./components/Factorial"
+import ChildComp from "./components/ChildComp"
 
 export default function App() {
-  let a = 34
-  let b = 32
-  let uname = "baswaraj"
+  // let a = 34
+  // let b = 32
+  // let uname = "baswaraj"
+
+
+  let info = [
+    {
+      m1: 23,
+      m2: 22,
+      m3: 67,
+      m4: 12
+    },
+    {
+      m1: 34,
+      m2: 56,
+      m3: 78,
+      m4: 75
+    },
+   
+
+  ];
+  const emp = [
+    { id: 1, name: 'Alice', role: 'Developer' },
+    { id: 2, name: 'Bob', role: 'Designer' },
+    { id: 3, name: 'Charlie', role: 'Developer' },
+    { id: 4, name: 'David', role: 'Manager' },
+    { id: 5, name: 'Eve', role: 'Developer' },
+    { id: 6, name: 'Frank', role: 'Tester' },
+    { id: 7, name: 'Grace', role: 'Designer' },
+    { id: 8, name: 'Heidi', role: 'Manager' },
+    { id: 9, name: 'Ivan', role: 'Tester' },
+    { id: 10, name: 'Judy', role: 'Developer' },
+  ];
+
+
   return (
     <>
 
-      <First></First>
+      {/* <First></First> */}
       <hr />
-      <ArrayRendering></ArrayRendering>
+      {/* <ArrayRendering></ArrayRendering> */}
       <hr />
       {/* <MapFilterExample></MapFilterExample> */}
       {/* <MapExample></MapExample> */}
-      <MapExProduct></MapExProduct>
+      {/* <MapExProduct></MapExProduct> */}
+      {/* Props */}
+      {/* <PropsDemo name="john" age={23} country="US"></PropsDemo> */}
+      <PropsDemo data={info}></PropsDemo>
+      <Square square={2 * 8} ></Square>
+      <Addition add={15 + 20}></Addition>
+      <Factorial num={5}></Factorial>
+      <ChildComp emp={emp}></ChildComp>
+
       {/* // <hr />
        <div style={{ 'textAlign': 'center' }}>
          <h1>Hello World</h1>
