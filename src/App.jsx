@@ -1,7 +1,8 @@
 import First from "./components/First"
 import ArrayRendering from "./components/ArrayRendering"
 import MapFilterExample from "./components/MapFilterExample"
-
+import MapExample from "./components/MapExample"
+import MapExProduct from "./components/MapExProduct"
 
 export default function App() {
   let a = 34
@@ -14,8 +15,9 @@ export default function App() {
       <hr />
       <ArrayRendering></ArrayRendering>
       <hr />
-      <MapFilterExample></MapFilterExample>
-
+      {/* <MapFilterExample></MapFilterExample> */}
+      {/* <MapExample></MapExample> */}
+      <MapExProduct></MapExProduct>
       {/* // <hr />
        <div style={{ 'textAlign': 'center' }}>
          <h1>Hello World</h1>
