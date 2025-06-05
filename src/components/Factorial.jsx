@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+
 function Factorial({num}) {
     let g = 1
     for (let i = 1; i <= parseInt(num); i++) {

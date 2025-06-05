@@ -9,10 +9,45 @@ import Addition from "./components/Addition"
 import Factorial from "./components/Factorial"
 import ChildComp from "./components/ChildComp"
 import Greeting from "./components/Greeting"
+import FactState from "./FactState"
+import Cube from "./Cube"
 
 import EventDemo from "./components/EventDemo"
+import { useState } from "react"
 
 export default function App() {
+
+  const [A, setA] = useState(0)
+  // const [fact,setFact] = useState(5)
+  // const [cube, setCube] = useState(0)
+
+  function Increment()
+  {
+    if (A < 10)
+    {
+      setA (A+1)
+
+    }
+    else {
+      alert("U can't Increase a value")
+    }
+  }
+
+  function Decrement()
+  {
+    if (A > 0)
+      {
+        setA (A-1)
+  
+      }
+      else {
+        alert("U can't Decrease a value")
+      }
+  }
+
+ 
+  
+
   // let a = 34
   // let b = 32
   // let uname = "baswaraj"
@@ -64,8 +99,24 @@ export default function App() {
       <Addition add={15 + 20}></Addition>
       <Factorial num={5}></Factorial>
       <ChildComp emp={emp}></ChildComp> */}
-      <EventDemo></EventDemo>
+      {/* <EventDemo></EventDemo> */}
+      <FactState></FactState>
+      <div className="text-center mt-3">
+        <br /><br />
+        <h3>{A}</h3>
+        <button className="btn btn-outline-primary" onClick={Increment}>Increment</button>
+        <br></br><br></br>
+        <button className="btn btn-outline-primary" onClick={Decrement}>Decrement</button>
+        <br></br><br></br>
+        {/* <button className="btn btn-info" onClick={Fact}>factorial</button> */}
+        {/* <p className="mt-5">Factorial:- {fact}</p> */}
+        {/* <p className="mt-5">Cube:- {cube}</p> */}
+            
+      </div>
       <Greeting></Greeting>
+
+      <FactState></FactState>
+      <Cube></Cube>
       {/* // <hr />
        <div style={{ 'textAlign': 'center' }}>
          <h1>Hello World</h1>
