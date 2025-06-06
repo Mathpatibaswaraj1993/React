@@ -1,0 +1,13 @@
+.c1 {
+  color: green;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.c2 {
+  color: aqua;
+  text-align: center;
+  text-decoration: dashed;
+  text-shadow: 4px;
+}
