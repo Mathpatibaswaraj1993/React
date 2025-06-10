@@ -9,6 +9,7 @@ import ObjectProduct from './components/ObjectProduct'
 import StateExamples from './components/StateExamples'
 import ConditionalRender from './components/ConditionalRender'
 import ConditionalRender1 from './components/ConditionalRender1'
+import FormValidation from './components/FormValidation'
 function App() {
 
   return (
@@ -21,8 +22,10 @@ function App() {
       {/* <UserForm/> */}
       {/* <StateExamples></StateExamples>
       <ConditionalRender></ConditionalRender> */}
-      <ConditionalRender1/>
+      {/* <ConditionalRender1/> */}
+      <FormValidation></FormValidation>
     </>
+
   )
 }
 
