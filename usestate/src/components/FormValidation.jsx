@@ -35,51 +35,103 @@ function FormValidation() {
       {
         validation.email="Email is Required.."
       }
-      else if (!upattern.test(form.email))
+      else if (!pattern.test(form.email))
         {
           validation.email="Wrong Pattern.."
       }
       if (!form.password)
         {
-          validation.password="Email is Required.."
+          validation.password="Password is Required.."
         }
         
         if (!form.confirmPassword)
           {
-            validation.cpassword="Email is Required.."
-          }
+            validation.cpassword="Confirm password is Required.."
+      }
+      else if(! form.password.match(form.confirmPassword))
+        {
+          validation.cpassword="Confirm password does not matched"
+      }
+      
+      setError(validation)
+      if (Object.keys(validation).length === 0)
+      {
+        alert("Form Submitted Successfully..")
+      }
+
+      setForm({
+        username: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
     }
   return (
       <>
-          <div class="container mt-5">
-  <h2 class="text-center mb-4">Register</h2>
+          <div className="container mt-5">
+  <h2 className="text-center mb-4">Register</h2>
   <form onSubmit={handlesubmit}>
     {/* <!-- Username --> */}
-    <div class="form-group">
-      <label for="username">Username</label>
-      <input type="text" class="form-control" name="username" placeholder="Enter username"  autoComplete='off' onChange={handleChange}/>
+    <div className="form-group">
+      <label>Username</label>
+            <input type="text"
+              className="form-control"
+              name="username"
+              placeholder="Enter username"
+              autoComplete='off'
+              onChange={handleChange}
+              value={form.username}
+/>
+            {error.username && <p className='text-danger'>{ error.username}</p>}
     </div>
 
     {/* <!-- Email --> */}
-    <div class="form-group">
-      <label for="email">Email address</label>
-      <input type="email" class="form-control" name="email" placeholder="Enter email"  autoComplete='off' onChange={handleChange}/>
+    <div className="form-group">
+      <label>Email address</label>
+            <input type="email"
+              className="form-control"
+              name="email"
+              placeholder="Enter email"
+              autoComplete='off'
+              onChange={handleChange}
+              value={form.email}
+/>
+              {error.email && <p className='text-danger'>{ error.email}</p>}
+
     </div>
 
     {/* <!-- Password --> */}
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control" name="password" placeholder="Password"  autoComplete='off'  onChange={handleChange}/>
+    <div className="form-group">
+      <label>Password</label>
+            <input type="password"
+              className="form-control"
+              name="password"
+              placeholder="******"
+              autoComplete='off'
+              onChange={handleChange}
+              value={form.password}
+/>
+            {error.password && <p className='text-danger'>{ error.password}</p>}
+
     </div>
 
     {/* <!-- Confirm Password --> */}
-    <div class="form-group">
-      <label for="confirmPassword">Confirm Password</label>
-      <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" autoComplete='off'  onChange={handleChange}/>
+    <div className="form-group">
+      <label>Confirm Password</label>
+            <input type="password"
+              className="form-control"
+              name="confirmPassword"
+              placeholder="******"
+              autoComplete='off'
+              onChange={handleChange}
+              value={form.confirmPassword}
+/>
+              {error.cpassword && <p className='text-danger'>{ error.cpassword}</p>}
+
     </div>
 
     {/* <!-- Submit Button --> */}
-    <button type="submit" class="btn btn-primary btn-block">Register</button>
+    <button type="submit" className="btn btn-primary btn-block">Register</button>
   </form>
 </div>
 
