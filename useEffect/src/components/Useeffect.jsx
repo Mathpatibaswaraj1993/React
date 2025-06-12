@@ -7,6 +7,7 @@ export default function Useeffect() {
     const [count,setCount]=useState(10)
     
     useEffect(() => {
+        //Mounting
         console.log("Component Mount"); //Mounting
         
          //Unmounting Phase
