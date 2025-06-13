@@ -2,7 +2,7 @@ import React from 'react'
 
 function User() {
   return (
-    <div className='container mt-4'>User</div>
+    <div className='container mt-4 rounded-end'>User</div>
   )
 }
 

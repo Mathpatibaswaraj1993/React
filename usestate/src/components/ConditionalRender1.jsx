@@ -14,7 +14,7 @@ function ConditionalRender1() {
   return (
    
     <>
-    <div className="container">
+    <div className="bg-slate-900">
     {
         isLoggedIn?<h2 style={{color:'green'}}>Welcome User !!</h2> : <h2 style={{color:'red'}}>Please Log in....</h2>
         
