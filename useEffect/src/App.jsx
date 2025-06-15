@@ -17,9 +17,9 @@ function App() {
         
         {status ? <Useeffect></Useeffect> : ""} */}
         
-        {/* <UseRef></UseRef> */}
+        <UseRef></UseRef>
         {/* <A></A> */}
-        <UseMemo></UseMemo>
+        {/* <UseMemo></UseMemo> */}
         </div>
 
     </>

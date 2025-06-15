@@ -67,7 +67,7 @@ function MapFilterExample() {
             <div>
                 <h2 className='text-warning text-center'>Show Employee Info as per Condition Using Filter</h2>
                 <br />
-                <table class="table table-striped w-50 p-4 m-auto bg-warning table-hover">
+                <table class="table table-striped w-70 p-4 m-auto bg-warning table-hover">
                     <thead>
                         <tr>
                             <th scope="col">Emp Id</th>

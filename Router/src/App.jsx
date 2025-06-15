@@ -1,4 +1,5 @@
-import {Link, Route, Routes, useNavigate,Navigate} from 'react-router-dom'
+/* eslint-disable no-unused-vars */
+import {Link, Route, Routes, useNavigate,Navigate, BrowserRouter} from 'react-router-dom'
 import Home from "./components/Home"
 import About from './components/About'
 import Contact from './components/Contact'
@@ -8,27 +9,34 @@ import Profile from './components/Profile'
 import User from './components/User'
 import Admin from './components/Admin'
 import User1 from './components/User1'
+import App2 from './components/App2'
+
+import Employee from './components/Employee'
+import Book from './components/Book'
+import Product from './components/Product'
+import EmployeeDetail from './EmployeeDetail'
+import BookDeatils from './components/BookDetails'
 function App() {
 
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   
-  const clickHandler =()=>{
-      navigate('ser')
-  }
+  // const clickHandler =()=>{
+  //     navigate('ser')
+  // }
 
-  // const navigate1 = useNavigate()
+  // // const navigate1 = useNavigate()
 
-  const clickHandler1 = () => {
-    console.log("click");
+  // const clickHandler1 = () => {
+  //   console.log("click");
     
-    navigate('user1')
-  }
+  //   navigate('user1')
+  // }
   
   return (
     <>
-      <div className='container mt-' >
+      {/* <div className='container mt-' > */}
         {/* Linking of pages */}
-       <Link to="">Home</Link>&nbsp;&nbsp;
+       {/* <Link to="">Home</Link>&nbsp;&nbsp;
        <Link to="about">About</Link>&nbsp;&nbsp;
        <Link to="contact">Contact</Link>&nbsp;&nbsp;
         <Link to="ser">Services</Link>&nbsp;&nbsp;
@@ -41,7 +49,7 @@ function App() {
       </div>
 <br />
       {/* Routes of Pages */}
-      <Routes>
+      {/* <Routes>
         <Route path='' element={<Home></Home>}></Route>
         <Route path='about' element={<About></About>}></Route>
         <Route path='contact' element={<Contact/>}></Route>
@@ -52,7 +60,18 @@ function App() {
         <Route path='admin' element={<Admin></Admin>}></Route>
         </Route>
         <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
-   </Routes>
+   </Routes>  */}
+      
+             <Routes>
+              <Route path="" element={<Home></Home>}></Route>
+              <Route path="p" element={<Product></Product>}></Route>
+              <Route path="e" element={<Employee></Employee>}></Route>
+              <Route path="b" element={<Book></Book>}></Route>
+              <Route path='e/:empId' element={<EmployeeDetail></EmployeeDetail>}></Route>
+              <Route path='b/:bookId' element={<BookDeatils></BookDeatils>}></Route>
+                </Routes>
+      <App2></App2>
+     
     </>
   )
 }
