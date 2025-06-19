@@ -16,14 +16,14 @@ function EmployeeDetail() {
     let filterdEmp = employees.filter((e)=>e.empId==empId)
     return (
       <>
-      <div className='container my-5 '>
+      <div className='container my-5 text-center shadow rounded-5 '>
 
                 <br /><br />
                 <div>
                   {
                                                  filterdEmp.map((e) => {
                                                      return (
-                                                         <div class="card" style={{ width: "18rem" }}>
+                                                         <div class="card bg-primary"  style={{ width: "18rem" }}>
                                                         <div class="card-body">
                                                                      <p class="card-text">{e.empId }</p>
                                                                      <p class="card-text">{e.name }</p>

@@ -4,13 +4,23 @@ import Home from './Home'
 import Employee from './Employee'
 import Product from './Product'
 import Book from './Book'
+import BookDetail1 from './BookDetail1'
 function App2() {
-  const [search, setSerach] = useState("")
+  // const [search, setSerach] = useState("")
+  // const [txt,setTxt] = useState("")
+
+  const [bk,setBk] = useState("")
   const navigate = useNavigate();
 
+  // const searchHandler = () => {
+  //   navigate(search)
+  // }
   const searchHandler = () => {
-    navigate(search)
+    // navigate(`/${txt}`)
+    // navigate(search)
+    navigate(`/book/${bk}`)
   }
+
     return (
       <>
       <div className='container'>
@@ -35,10 +45,18 @@ function App2() {
       <li className="nav-item">
         <Link className="nav-link" to="b">Book</Link>
       </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="pac">PropsAsCallBack</Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="pa">Parent</Link>
+      </li>
     </ul>
     <form className="form-inline my-2 my-lg-0">
-      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=> setSerach(e.target.value.trim())}/>
-      <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={searchHandler}>Search</button>
+      {/* <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=> setSerach(e.target.value.trim())}/> */}
+      {/* <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=> setTxt(e.target.value.trim())}/> */}
+      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=> setBk(e.target.value.trim())}/>
+      <button className="btn btn-outline-success my-2 my-sm-0" type="button" onClick={searchHandler}>Search</button>
     </form>
   </div>
 </nav>

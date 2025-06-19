@@ -16,14 +16,25 @@ import Book from './components/Book'
 import Product from './components/Product'
 import EmployeeDetail from './EmployeeDetail'
 import BookDeatils from './components/BookDetails'
+import EmpDetail from './components/EmpDetail'
+import BookDetail1 from './components/BookDetail1'
+import { useState } from 'react'
+import PropsAsCallBack from './PropsAsCallBack'
+import Parent from './Parent'
 function App() {
 
-  // const navigate = useNavigate()
+  // const [txt, setTxt] = useState()
+  
+
+  const navigate = useNavigate()
   
   // const clickHandler =()=>{
-  //     navigate('ser')
+  //   //     navigate('ser')
   // }
 
+  // const searchHandler = () => {
+  //   navigate(`$(/txt)`)
+  // }
   // // const navigate1 = useNavigate()
 
   // const clickHandler1 = () => {
@@ -69,6 +80,13 @@ function App() {
               <Route path="b" element={<Book></Book>}></Route>
               <Route path='e/:empId' element={<EmployeeDetail></EmployeeDetail>}></Route>
               <Route path='b/:bookId' element={<BookDeatils></BookDeatils>}></Route>
+              <Route path='/:name' element={<EmpDetail></EmpDetail>}></Route>
+        {/* <Route path='b/:title' element={<BookDetail1></BookDetail1>}></Route> */}
+        <Route path='/book/:title' element={<BookDetail1 />}></Route>
+        <Route path='pac' element={<PropsAsCallBack />}></Route>
+        <Route path='pa' element={<Parent />}></Route>
+
+
                 </Routes>
       <App2></App2>
      
